@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>No Fly Zone</title>
+		<link rel="stylesheet" href=".\bootstrap\css\bootstrap.min.css">
+		<link rel="stylesheet" href=".\css\styles.css">
+		<script src="scripts\game.js"></script>
+		<script src="scripts\flyManager.js"></script>
+		<script src="scripts\fly.js"></script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<h1>No Fly Zone</h1>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				Timer: <div id="flyGameTimerPlaceholder"></div>
+				Score: <div id="flyGameScorePlaceholder"></div>
+				<button onclick="initiateGame()">Start</button>
+				<button onclick="addFly()">Generate Flys</button>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<canvas id="flyGame" width="600" height="400"></canvas>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				Upload Background Image <input type="file" id="fileInput"></input>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</body>
+</html>
