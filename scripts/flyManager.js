@@ -45,12 +45,6 @@ drawFlys = function()
 	}
 }
 
-clearCanvas = function()
-{
-	canvasContext.fillStyle = '#FFFFFF';
-	canvasContext.fillRect(0, 0, canvas.width, canvas.height);
-}
-
 generateRandomNumber = function(min, max)
 {
 	var randomNumber = Math.floor((Math.random() * max) + min);
@@ -82,4 +76,9 @@ removeDeadFlys = function()
 			flyList.splice(i, 1);
 		}
 	}
+}
+
+resetFlyList = function()
+{
+	flyList = [];
 }

@@ -23,6 +23,8 @@ initiateGame = function(){
 	intervalTimer = setInterval(updateTimer, 100);
 	flyTimer = setInterval(addFly, 1000);
 	updateScore();
+	clearCanvas();
+	resetFlyList();
 }
 
 updateTimer = function(){
@@ -61,4 +63,10 @@ canvasClicked = function(event){
 updateScore = function()
 {
 	document.getElementById('flyGameScorePlaceholder').innerHTML = score;	
+}
+
+clearCanvas = function()
+{
+	canvasContext.fillStyle = '#FFFFFF';
+	canvasContext.fillRect(0, 0, canvas.width, canvas.height);
 }
