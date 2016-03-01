@@ -60,6 +60,7 @@ checkCanvasClickForFly = function(clickedPositionX, clickedPositionY)
 			if(clickedPositionY >= flyList[i].yPosition && clickedPositionY <= (flyList[i].yPosition + flyImageWidth))
 			{
 				flyList[i].die();
+				playSquish();
 				drawFlys();
 				flysClicked++;
 			}
@@ -81,4 +82,10 @@ removeDeadFlys = function()
 resetFlyList = function()
 {
 	flyList = [];
+}
+
+playSquish = function()
+{
+	var audio = new Audio('./sounds/squish.mp3');
+	audio.play();
 }
